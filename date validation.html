@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username and Date of Birth Validation</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="response.html" method="post">
+        <!-- Username validation: only letters, numbers, and underscores, between 3 and 16 characters -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" 
+               pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{3,16}" 
+               title="Username should be 3-16 characters long and can only contain letters, numbers." 
+               required>
+        <br><br>
+
+        <!-- Date of Birth validation: format YYYY-MM-DD -->
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob" 
+               pattern="^\d{4}-\d{2}-\d{2}$" 
+               title="Date of Birth should be in the format YYYY-MM-DD." 
+               required>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
